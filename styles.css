@@ -1,0 +1,264 @@
+/* Importando fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilo Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #13f5f5, #033454);
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #ffffff 3px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin-right: 20px;
+}
+
+header h1 {
+    float: left;
+    font-size: 24px;
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header h1, header nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    text-align: center;
+    color: #09a8a8;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+section.bg-light {
+    background: #f4f4f4;
+}
+
+/* Produtos */
+.produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.produto h3 {
+    margin: 0 0 10px 0;
+    color: #06777b;
+    font-size: 1.5rem;
+}
+
+/* Galeria de Imagens */
+.galeria-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.galeria-imagens img {
+    width: 800px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-imagens img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #06777b;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #004e92;
+    outline: none;
+}
+
+form button {
+    padding: 15px;
+    background: #01606c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background: #ffffff;
+}
+
+/* Rodapé */
+footer {
+    background: #0eaaaa;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 3px solid #ffffff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: #1ff5f8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #004e92;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #e8491d;
+    }
+
+    nav ul li a:hover {
+        background-color: #e8491d;
+        color: #fff;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
